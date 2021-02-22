@@ -30,4 +30,23 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  members:
+    edit:
+      title: Editing Member
+    form:
+      name: Name
+      website_url: 'Website URL'
+    index:
+      destroy: Destroy
+      edit: Edit
+      friend_count: Friend Count
+      name: Name
+      short_url: 'Short URL'
+      show: Show
+      title: Members
+    new:
+      title: New Member
+    show:
+      headings: Headings
+      website: Website URL
+      website_shortened: Website Short URL
