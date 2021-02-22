@@ -13,6 +13,20 @@
 
   <div>
     <h2><%= t('.headings') %></h2>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th><%= t('.headings') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @member.headings.each do |heading| %>
+          <tr>
+            <td><%= heading.text %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 
   <%= link_to 'Edit', edit_member_path(@member) %> |
