@@ -1,1 +1,18 @@
-<h1>Hello</h1>
+<h1>Members</h1>
+
+<div class='flex'>
+  <table class='table'>
+    <tr>
+      <th>Name</th>
+      <th>Short URL</th>
+      <th>Friend count</th>
+    </tr>
+    <%- current_user.members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= link_to member.website_short_url, member.website_short_url %></td>
+        <td></td>
+      </tr>
+    <%- end %>
+  </table>
+</div>

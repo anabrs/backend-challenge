@@ -11,6 +11,11 @@ RSpec.describe Member, type: :model do
       expect(Member.create!(member_attributes)).to be_truthy
     end
 
+    it 'creates the website_short_url before saving' do
+      member = Member.create!(member_attributes)
+      expect(member.website_short_url).to be_present
+    end
+
     it 'fails when required fields are not present' do
       expect { Member.create! }.to raise_error(ActiveRecord::RecordInvalid)
     end

@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
+gem 'bitly', '~> 2.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.7'
 gem 'devise-bootstrap-views', '~> 1.0'
@@ -17,6 +18,7 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry'
   gem 'rspec-rails'
 end
