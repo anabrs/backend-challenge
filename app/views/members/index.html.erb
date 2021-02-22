@@ -1,18 +1,31 @@
-<h1>Members</h1>
+<h1><%= t('.title') %></h1>
 
-<div class='flex'>
-  <table class='table'>
+<table class='table'>
+  <thead>
     <tr>
-      <th>Name</th>
-      <th>Short URL</th>
-      <th>Friend count</th>
+      <th><%= t('.name') %></th>
+      <th><%= t('.short_url') %></th>
+      <th><%= t('.friend_count') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-    <%- current_user.members.each do |member| %>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
       <tr>
         <td><%= member.name %></td>
-        <td><%= link_to member.website_short_url, member.website_short_url %></td>
+        <td><%= link_to member.website_short_url %></td>
         <td></td>
+        <td><%= link_to t('.show'), member %></td>
+        <td><%= link_to t('.edit'), edit_member_path(member) %></td>
+        <td><%= link_to t('.destroy'), member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <%- end %>
-  </table>
-</div>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_member_path %>

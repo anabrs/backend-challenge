@@ -1,0 +1,20 @@
+<h1><%= @member.name %></h1>
+
+<div class='profile-container'>
+  <div>
+    <h2><%= t('.website') %></h2>
+    <%= link_to @member.website_url %>
+  </div>
+
+  <div>
+    <h2><%= t('.website_shortened') %></h2>
+    <%= link_to @member.website_short_url %>
+  </div>
+
+  <div>
+    <h2><%= t('.headings') %></h2>
+  </div>
+
+  <%= link_to 'Edit', edit_member_path(@member) %> |
+  <%= link_to 'Back', members_path %>
+</div>
