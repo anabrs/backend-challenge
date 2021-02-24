@@ -1,3 +1,25 @@
+# Experts Catalog
+
+Create a catalog with your favorite experts only providing their site URL and name!
+
+## Development
+
+Ruby version: 3.0.0
+Rails version: 6.1.3
+
+### Dependencies
+
+Run `bundle install` to get all dependencies.
+
+### Database
+
+This project uses posrtgresql.
+Run `rails db:setup`
+
+## Testing
+
+RSpec testing. Run `rspec`
+
 # EverlyWell Backend Challenge
 
 ### Overview
